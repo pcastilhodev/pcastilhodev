@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 16" width="128" height="32">
+  <!-- Frame 1: neutral / right paw back -->
+  <!-- Head -->
+  <rect x="2" y="1" width="7" height="1" fill="#f4a261"/>
+  <rect x="1" y="2" width="9" height="1" fill="#f4a261"/>
+  <rect x="1" y="3" width="9" height="1" fill="#f4a261"/>
+  <rect x="2" y="2" width="1" height="1" fill="#0d0d0d"/><!-- ear stripe -->
+  <rect x="7" y="2" width="1" height="1" fill="#0d0d0d"/><!-- ear stripe -->
+  <rect x="3" y="3" width="1" height="1" fill="#ffffff"/><!-- eye -->
+  <rect x="6" y="3" width="1" height="1" fill="#ffffff"/><!-- eye -->
+  <!-- Body -->
+  <rect x="1" y="4" width="10" height="1" fill="#f4a261"/>
+  <rect x="3" y="4" width="1" height="1" fill="#0d0d0d"/><!-- stripe -->
+  <rect x="6" y="4" width="1" height="1" fill="#0d0d0d"/><!-- stripe -->
+  <rect x="1" y="5" width="10" height="1" fill="#f4a261"/>
+  <rect x="2" y="5" width="7" height="1" fill="#e9c46a"/><!-- belly -->
+  <rect x="1" y="6" width="10" height="1" fill="#f4a261"/>
+  <rect x="3" y="6" width="1" height="1" fill="#0d0d0d"/><!-- stripe -->
+  <rect x="7" y="6" width="1" height="1" fill="#0d0d0d"/><!-- stripe -->
+  <!-- Legs frame 1 -->
+  <rect x="2" y="7" width="2" height="2" fill="#f4a261"/><!-- front leg -->
+  <rect x="7" y="7" width="2" height="2" fill="#f4a261"/><!-- back leg -->
+  <rect x="2" y="9" width="2" height="1" fill="#0d0d0d"/><!-- paw -->
+  <rect x="7" y="9" width="2" height="1" fill="#0d0d0d"/><!-- paw -->
+  <!-- Tail frame 1 -->
+  <rect x="11" y="4" width="1" height="1" fill="#f4a261"/>
+  <rect x="12" y="3" width="1" height="1" fill="#f4a261"/>
+  <rect x="12" y="4" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="13" y="2" width="1" height="2" fill="#f4a261"/>
+
+  <!-- Frame 2: mid-stride left (offset x=16) -->
+  <!-- Head (same) -->
+  <rect x="18" y="1" width="7" height="1" fill="#f4a261"/>
+  <rect x="17" y="2" width="9" height="1" fill="#f4a261"/>
+  <rect x="17" y="3" width="9" height="1" fill="#f4a261"/>
+  <rect x="18" y="2" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="23" y="2" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="19" y="3" width="1" height="1" fill="#ffffff"/>
+  <rect x="22" y="3" width="1" height="1" fill="#ffffff"/>
+  <!-- Body -->
+  <rect x="17" y="4" width="9" height="1" fill="#f4a261"/>
+  <rect x="19" y="4" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="22" y="4" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="17" y="5" width="9" height="1" fill="#f4a261"/>
+  <rect x="18" y="5" width="6" height="1" fill="#e9c46a"/>
+  <rect x="17" y="6" width="9" height="1" fill="#f4a261"/>
+  <rect x="19" y="6" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="23" y="6" width="1" height="1" fill="#0d0d0d"/>
+  <!-- Legs frame 2: legs apart -->
+  <rect x="18" y="7" width="2" height="3" fill="#f4a261"/><!-- front leg extended -->
+  <rect x="23" y="7" width="2" height="1" fill="#f4a261"/><!-- back leg up -->
+  <rect x="23" y="8" width="2" height="1" fill="#f4a261"/>
+  <rect x="18" y="10" width="2" height="1" fill="#0d0d0d"/><!-- paw -->
+  <rect x="23" y="9" width="2" height="1" fill="#0d0d0d"/><!-- paw -->
+  <!-- Tail frame 2: up -->
+  <rect x="27" y="3" width="1" height="1" fill="#f4a261"/>
+  <rect x="28" y="2" width="1" height="1" fill="#f4a261"/>
+  <rect x="28" y="3" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="29" y="1" width="1" height="3" fill="#f4a261"/>
+
+  <!-- Frame 3: neutral / left paw back (offset x=32) -->
+  <rect x="34" y="1" width="7" height="1" fill="#f4a261"/>
+  <rect x="33" y="2" width="9" height="1" fill="#f4a261"/>
+  <rect x="33" y="3" width="9" height="1" fill="#f4a261"/>
+  <rect x="34" y="2" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="39" y="2" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="35" y="3" width="1" height="1" fill="#ffffff"/>
+  <rect x="38" y="3" width="1" height="1" fill="#ffffff"/>
+  <rect x="33" y="4" width="9" height="1" fill="#f4a261"/>
+  <rect x="35" y="4" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="38" y="4" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="33" y="5" width="9" height="1" fill="#f4a261"/>
+  <rect x="34" y="5" width="6" height="1" fill="#e9c46a"/>
+  <rect x="33" y="6" width="9" height="1" fill="#f4a261"/>
+  <rect x="35" y="6" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="39" y="6" width="1" height="1" fill="#0d0d0d"/>
+  <!-- Legs frame 3: same as 1 but paws swapped -->
+  <rect x="34" y="7" width="2" height="2" fill="#f4a261"/>
+  <rect x="38" y="7" width="2" height="2" fill="#f4a261"/>
+  <rect x="34" y="9" width="2" height="1" fill="#0d0d0d"/>
+  <rect x="38" y="9" width="2" height="1" fill="#0d0d0d"/>
+  <!-- Tail frame 3: down -->
+  <rect x="43" y="4" width="1" height="2" fill="#f4a261"/>
+  <rect x="44" y="5" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="44" y="6" width="1" height="1" fill="#f4a261"/>
+  <rect x="45" y="6" width="1" height="1" fill="#f4a261"/>
+
+  <!-- Frame 4: mid-stride right (offset x=48) -->
+  <rect x="50" y="1" width="7" height="1" fill="#f4a261"/>
+  <rect x="49" y="2" width="9" height="1" fill="#f4a261"/>
+  <rect x="49" y="3" width="9" height="1" fill="#f4a261"/>
+  <rect x="50" y="2" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="55" y="2" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="51" y="3" width="1" height="1" fill="#ffffff"/>
+  <rect x="54" y="3" width="1" height="1" fill="#ffffff"/>
+  <rect x="49" y="4" width="9" height="1" fill="#f4a261"/>
+  <rect x="51" y="4" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="54" y="4" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="49" y="5" width="9" height="1" fill="#f4a261"/>
+  <rect x="50" y="5" width="6" height="1" fill="#e9c46a"/>
+  <rect x="49" y="6" width="9" height="1" fill="#f4a261"/>
+  <rect x="51" y="6" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="55" y="6" width="1" height="1" fill="#0d0d0d"/>
+  <!-- Legs frame 4: front leg up, back extended -->
+  <rect x="50" y="7" width="2" height="1" fill="#f4a261"/>
+  <rect x="50" y="8" width="2" height="1" fill="#f4a261"/>
+  <rect x="54" y="7" width="2" height="3" fill="#f4a261"/>
+  <rect x="50" y="9" width="2" height="1" fill="#0d0d0d"/>
+  <rect x="54" y="10" width="2" height="1" fill="#0d0d0d"/>
+  <!-- Tail frame 4: mid -->
+  <rect x="59" y="3" width="1" height="2" fill="#f4a261"/>
+  <rect x="60" y="2" width="1" height="2" fill="#f4a261"/>
+  <rect x="60" y="4" width="1" height="1" fill="#0d0d0d"/>
+  <rect x="61" y="1" width="1" height="3" fill="#f4a261"/>
+</svg>
