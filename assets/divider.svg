@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 12" width="900" height="12">
+  <defs>
+    <!-- Leaf tile: 30px wide, repeats across 900px = 30 tiles -->
+    <pattern id="leaf-tile" x="0" y="0" width="30" height="12" patternUnits="userSpaceOnUse">
+      <!-- Stem -->
+      <rect x="14" y="4" width="2" height="6" fill="#2d6a4f"/>
+      <!-- Left leaf -->
+      <rect x="8"  y="3" width="6" height="2" fill="#52b788"/>
+      <rect x="6"  y="5" width="8" height="2" fill="#52b788"/>
+      <rect x="8"  y="7" width="6" height="1" fill="#2d6a4f"/>
+      <!-- Right leaf -->
+      <rect x="16" y="3" width="6" height="2" fill="#52b788"/>
+      <rect x="16" y="5" width="8" height="2" fill="#52b788"/>
+      <rect x="16" y="7" width="6" height="1" fill="#2d6a4f"/>
+      <!-- Orange accent flower -->
+      <rect x="13" y="1" width="4" height="2" fill="#f4a261"/>
+      <rect x="14" y="0" width="2" height="3" fill="#e9c46a"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="12" fill="#0d1f17"/>
+  <rect width="900" height="12" fill="url(#leaf-tile)"/>
+</svg>
