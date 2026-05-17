@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="https://pcastilhodev.github.io/pcastilhodev/assets/banner.svg"
+  <img src="https://raw.githubusercontent.com/pcastilhodev/pcastilhodev/main/assets/banner.svg"
        alt="Tropical tiger banner" width="900"/>
 </div>
 
-<img src="https://pcastilhodev.github.io/pcastilhodev/assets/divider.svg" width="900"/>
+<img src="https://raw.githubusercontent.com/pcastilhodev/pcastilhodev/main/assets/divider.svg" width="900"/>
 
 <div align="center">
 
@@ -11,7 +11,7 @@
 
 </div>
 
-<img src="https://pcastilhodev.github.io/pcastilhodev/assets/divider.svg" width="900"/>
+<img src="https://raw.githubusercontent.com/pcastilhodev/pcastilhodev/main/assets/divider.svg" width="900"/>
 
 ### ⚔️ Linguagens
 
@@ -30,7 +30,7 @@
 
 [![Harness Engineering](https://img.shields.io/badge/Harness_Engineering-0d1f17?style=flat-square&logo=harness&logoColor=f4a261)](https://www.harness.io)
 
-<img src="https://pcastilhodev.github.io/pcastilhodev/assets/divider.svg" width="900"/>
+<img src="https://raw.githubusercontent.com/pcastilhodev/pcastilhodev/main/assets/divider.svg" width="900"/>
 
 <div align="center">
 
@@ -49,7 +49,7 @@
 
 </div>
 
-<img src="https://pcastilhodev.github.io/pcastilhodev/assets/divider.svg" width="900"/>
+<img src="https://raw.githubusercontent.com/pcastilhodev/pcastilhodev/main/assets/divider.svg" width="900"/>
 
 <div align="center">
   <img src="assets/tiger-contrib.svg" alt="Tiger contribution graph" width="900"/>

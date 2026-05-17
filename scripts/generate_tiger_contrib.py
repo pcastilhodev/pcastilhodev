@@ -87,7 +87,6 @@ def build_svg(weeks: list) -> str:
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {total_w} {total_h}" width="{total_w}" height="{total_h}">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
       @keyframes walk {{
         0%   {{ transform: translateX(-40px); }}
         100% {{ transform: translateX({travel_distance}px); }}
@@ -106,7 +105,7 @@ def build_svg(weeks: list) -> str:
 
   <!-- Label -->
   <text x="{LEFT_MARGIN}" y="{TOP_MARGIN - 8}"
-    font-family="'Press Start 2P', monospace" font-size="8" fill="#e9c46a">
+    font-family="monospace" font-size="8" fill="#e9c46a">
     contributions
   </text>
 
