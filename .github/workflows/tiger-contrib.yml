@@ -23,7 +23,7 @@ jobs:
       - name: Generate tiger contribution SVG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/generate_tiger_contrib.py "$GITHUB_TOKEN"
+        run: python scripts/generate_tiger_contrib.py
 
       - name: Commit updated SVG
         run: |

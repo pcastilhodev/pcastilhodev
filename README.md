@@ -35,17 +35,17 @@
 <div align="center">
 
 <a href="https://github.com/pcastilhodev">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=pcastilhodev&show_icons=true&count_private=true&bg_color=0d1f17&border_color=f4a261&title_color=e9c46a&text_color=f4a261&icon_color=52b788&border_radius=0&hide_border=false" />
+  <img height="160" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=pcastilhodev&show_icons=true&count_private=true&bg_color=0d1f17&border_color=f4a261&title_color=e9c46a&text_color=f4a261&icon_color=52b788&border_radius=0&hide_border=false" />
 </a>
 <a href="https://github.com/pcastilhodev">
-  <img height="160" src="https://streak-stats.demolab.com?user=pcastilhodev&background=0d1f17&border=f4a261&stroke=f4a261&ring=e9c46a&fire=f4a261&currStreakNum=e9c46a&sideNums=f4a261&currStreakLabel=52b788&sideLabels=52b788&dates=f4a261&border_radius=0" />
+  <img height="160" alt="GitHub streak stats" src="https://streak-stats.demolab.com?user=pcastilhodev&background=0d1f17&border=f4a261&stroke=f4a261&ring=e9c46a&fire=f4a261&currStreakNum=e9c46a&sideNums=f4a261&currStreakLabel=52b788&sideLabels=52b788&dates=f4a261&border_radius=0" />
 </a>
 
 </div>
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pcastilhodev&layout=compact&bg_color=0d1f17&border_color=f4a261&title_color=e9c46a&text_color=f4a261&border_radius=0" />
+<img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pcastilhodev&layout=compact&bg_color=0d1f17&border_color=f4a261&title_color=e9c46a&text_color=f4a261&border_radius=0" />
 
 </div>
 

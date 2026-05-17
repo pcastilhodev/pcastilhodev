@@ -141,11 +141,12 @@ def build_svg(weeks: list) -> str:
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python generate_tiger_contrib.py <GITHUB_TOKEN>")
+    import os
+    token = os.environ.get("GITHUB_TOKEN") or (sys.argv[1] if len(sys.argv) > 1 else None)
+    if not token:
+        print("Usage: GITHUB_TOKEN=<token> python generate_tiger_contrib.py")
+        print("   or: python generate_tiger_contrib.py <token>")
         sys.exit(1)
-
-    token = sys.argv[1]
     print("Fetching contributions...")
     weeks = fetch_contributions(token)
     print(f"Got {len(weeks)} weeks of data")
