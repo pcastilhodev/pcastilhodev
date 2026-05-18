@@ -1,184 +1,911 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
-  <defs>
-    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#0d1f17" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#1a3a2a" stop-opacity="1"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" shape-rendering="crispEdges">
+  <!-- ==================================================================
+       KTK-STYLE BANNER  |  900x300 SVG  |  450x150 logical pixel grid
+       Each logical pixel = 2x2 SVG units.  All rects use x=col*2, y=row*2
+       ================================================================== -->
 
-  <!-- LAYER 0: Sky -->
-  <rect width="900" height="300" fill="#0d1f17"/>
-  <rect width="900" height="300" fill="url(#sky-grad)"/>
+  <!-- ============ SKY BASE ============ -->
+  <rect x="0" y="0" width="900" height="300" fill="#080D18"/>
+  <!-- Banded sky gradient via stacked rects (top dark -> horizon glow) -->
+  <rect x="0" y="0"   width="900" height="40"  fill="#080D18"/>
+  <rect x="0" y="40"  width="900" height="30"  fill="#0B1322"/>
+  <rect x="0" y="70"  width="900" height="30"  fill="#0F1B2E"/>
+  <rect x="0" y="100" width="900" height="30"  fill="#142540"/>
+  <rect x="0" y="130" width="900" height="30"  fill="#1A3048"/>
+  <rect x="0" y="160" width="900" height="30"  fill="#16283C"/>
 
-  <!-- Stars with SMIL twinkle -->
-  <rect x="680" y="20" width="3" height="3" fill="#e9c46a">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="740" y="12" width="3" height="3" fill="#e9c46a">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="800" y="30" width="3" height="3" fill="#e9c46a">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="820" y="18" width="2" height="2" fill="#ffffff">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="860" y="8" width="2" height="2" fill="#ffffff">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Dither bands between sky shades -->
+  <g fill="#0B1322">
+    <rect x="0"   y="38" width="900" height="2"/>
+    <rect x="100" y="36" width="2" height="2"/><rect x="220" y="36" width="2" height="2"/>
+    <rect x="340" y="36" width="2" height="2"/><rect x="460" y="36" width="2" height="2"/>
+    <rect x="580" y="36" width="2" height="2"/><rect x="700" y="36" width="2" height="2"/>
+    <rect x="820" y="36" width="2" height="2"/>
+  </g>
+  <g fill="#0F1B2E">
+    <rect x="40"  y="68" width="2" height="2"/><rect x="160" y="68" width="2" height="2"/>
+    <rect x="280" y="68" width="2" height="2"/><rect x="400" y="68" width="2" height="2"/>
+    <rect x="520" y="68" width="2" height="2"/><rect x="640" y="68" width="2" height="2"/>
+    <rect x="760" y="68" width="2" height="2"/><rect x="860" y="68" width="2" height="2"/>
+  </g>
+  <g fill="#142540">
+    <rect x="80"  y="98" width="2" height="2"/><rect x="200" y="98" width="2" height="2"/>
+    <rect x="320" y="98" width="2" height="2"/><rect x="440" y="98" width="2" height="2"/>
+    <rect x="560" y="98" width="2" height="2"/><rect x="680" y="98" width="2" height="2"/>
+    <rect x="800" y="98" width="2" height="2"/>
+  </g>
 
-  <!-- LAYER 1: Background tree silhouettes -->
-  <rect x="600" y="40"  width="20" height="200" fill="#1a3a2a"/>
-  <rect x="580" y="60"  width="60" height="60"  fill="#1a3a2a"/>
-  <rect x="570" y="40"  width="80" height="40"  fill="#1a3a2a"/>
-  <rect x="590" y="20"  width="40" height="40"  fill="#1a3a2a"/>
-  <rect x="750" y="50"  width="16" height="190" fill="#1a3a2a"/>
-  <rect x="730" y="70"  width="56" height="50"  fill="#1a3a2a"/>
-  <rect x="720" y="50"  width="76" height="40"  fill="#1a3a2a"/>
-  <rect x="860" y="30"  width="20" height="220" fill="#1a3a2a"/>
-  <rect x="840" y="50"  width="60" height="60"  fill="#1a3a2a"/>
-  <rect x="850" y="20"  width="40" height="40"  fill="#1a3a2a"/>
-  <rect x="0"   y="50"  width="20" height="200" fill="#1a3a2a"/>
-  <rect x="0"   y="30"  width="60" height="60"  fill="#1a3a2a"/>
+  <!-- ============ STARS ============ -->
+  <g fill="#F4E4A8">
+    <rect x="120" y="20" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite"/></rect>
+    <rect x="200" y="14" width="2" height="2"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.6s" begin="0.4s" repeatCount="indefinite"/></rect>
+    <rect x="284" y="30" width="2" height="2"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.8s" begin="0.9s" repeatCount="indefinite"/></rect>
+    <rect x="360" y="10" width="2" height="2"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" begin="1.3s" repeatCount="indefinite"/></rect>
+    <rect x="420" y="50" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s"   begin="0.2s" repeatCount="indefinite"/></rect>
+    <rect x="500" y="22" width="2" height="2"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.8s" begin="1.7s" repeatCount="indefinite"/></rect>
+    <rect x="620" y="36" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="0.6s" repeatCount="indefinite"/></rect>
+    <rect x="720" y="12" width="2" height="2"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></rect>
+    <rect x="660" y="80" width="2" height="2"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" begin="0.3s" repeatCount="indefinite"/></rect>
+    <rect x="540" y="76" width="2" height="2"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.4s" begin="1.5s" repeatCount="indefinite"/></rect>
+  </g>
+  <g fill="#FFFFFF">
+    <rect x="160" y="26" width="2" height="2"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/></rect>
+    <rect x="240" y="44" width="2" height="2"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s"   begin="0.7s" repeatCount="indefinite"/></rect>
+    <rect x="320" y="18" width="2" height="2"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.6s" begin="1.4s" repeatCount="indefinite"/></rect>
+    <rect x="468" y="38" width="2" height="2"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" begin="0.5s" repeatCount="indefinite"/></rect>
+    <rect x="590" y="14" width="2" height="2"><animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="1.0s" repeatCount="indefinite"/></rect>
+    <rect x="700" y="44" width="2" height="2"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" begin="0.2s" repeatCount="indefinite"/></rect>
+  </g>
 
-  <!-- LAYER 2: Light rays with SMIL flicker -->
-  <polygon points="400,0 440,0 560,300 520,300" fill="#e9c46a">
-    <animate attributeName="opacity" values="0.12;0.22;0.12" dur="4s" repeatCount="indefinite"/>
-  </polygon>
-  <polygon points="500,0 520,0 600,300 580,300" fill="#e9c46a">
-    <animate attributeName="opacity" values="0.12;0.22;0.12" dur="4s" begin="2s" repeatCount="indefinite"/>
-  </polygon>
+  <!-- ============ MOON ============ -->
+  <!-- Soft halo (warm green-yellow tint) -->
+  <g opacity="0.55">
+    <animate attributeName="opacity" values="0.45;0.65;0.45" dur="5s" repeatCount="indefinite"/>
+    <rect x="612" y="44" width="56" height="2" fill="#1F2E1A"/>
+    <rect x="600" y="46" width="80" height="2" fill="#243520"/>
+    <rect x="592" y="48" width="96" height="2" fill="#2A3A20"/>
+    <rect x="586" y="50" width="108" height="2" fill="#2A3A20"/>
+    <rect x="582" y="52" width="116" height="2" fill="#2A3A20"/>
+    <rect x="580" y="54" width="120" height="20" fill="#2A3A20"/>
+    <rect x="582" y="74" width="116" height="2" fill="#2A3A20"/>
+    <rect x="586" y="76" width="108" height="2" fill="#2A3A20"/>
+    <rect x="592" y="78" width="96" height="2" fill="#243520"/>
+    <rect x="600" y="80" width="80" height="2" fill="#243520"/>
+    <rect x="612" y="82" width="56" height="2" fill="#1F2E1A"/>
+  </g>
+  <!-- Moon disc with subtle pulse -->
+  <g>
+    <animate attributeName="opacity" values="0.92;1;0.92" dur="4s" repeatCount="indefinite"/>
+    <!-- Outer glow ring (darker yellow) -->
+    <rect x="624" y="50" width="32" height="2" fill="#8C7A40"/>
+    <rect x="618" y="52" width="44" height="2" fill="#A89255"/>
+    <rect x="614" y="54" width="52" height="2" fill="#C9B36A"/>
+    <rect x="612" y="56" width="56" height="2" fill="#E2CC85"/>
+    <rect x="610" y="58" width="60" height="2" fill="#F0DB95"/>
+    <rect x="610" y="60" width="60" height="2" fill="#F5E6A0"/>
+    <rect x="608" y="62" width="64" height="12" fill="#F5E6A0"/>
+    <rect x="610" y="74" width="60" height="2" fill="#F5E6A0"/>
+    <rect x="610" y="76" width="60" height="2" fill="#F0DB95"/>
+    <rect x="612" y="78" width="56" height="2" fill="#E2CC85"/>
+    <rect x="614" y="80" width="52" height="2" fill="#C9B36A"/>
+    <rect x="618" y="82" width="44" height="2" fill="#A89255"/>
+    <rect x="624" y="84" width="32" height="2" fill="#8C7A40"/>
+    <!-- Moon craters / shading (cooler dimples) -->
+    <rect x="624" y="60" width="6" height="4" fill="#E2CC85"/>
+    <rect x="650" y="66" width="4" height="4" fill="#E2CC85"/>
+    <rect x="632" y="74" width="6" height="4" fill="#E2CC85"/>
+    <rect x="654" y="78" width="4" height="2" fill="#C9B36A"/>
+    <rect x="626" y="68" width="2" height="2" fill="#C9B36A"/>
+  </g>
 
-  <!-- LAYER 3: Mid-layer canopy -->
-  <rect x="0"   y="0"   width="200" height="140" fill="#2d6a4f"/>
-  <rect x="20"  y="0"   width="160" height="100" fill="#52b788"/>
-  <rect x="60"  y="0"   width="80"  height="60"  fill="#2d6a4f"/>
-  <rect x="700" y="0"   width="200" height="150" fill="#2d6a4f"/>
-  <rect x="720" y="0"   width="180" height="110" fill="#52b788"/>
-  <rect x="760" y="0"   width="100" height="70"  fill="#2d6a4f"/>
-  <rect x="80"  y="100" width="8"   height="80"  fill="#2d6a4f"/>
-  <rect x="120" y="80"  width="8"   height="100" fill="#2d6a4f"/>
-  <rect x="40"  y="120" width="8"   height="60"  fill="#2d6a4f"/>
-  <rect x="780" y="110" width="8"   height="80"  fill="#2d6a4f"/>
-  <rect x="820" y="90"  width="8"   height="90"  fill="#2d6a4f"/>
+  <!-- ============ FAR MOUNTAINS (silhouette layer 1) ============ -->
+  <g fill="#0A1018">
+    <!-- Mountain 1 left -->
+    <rect x="0"   y="200" width="60" height="2"/>
+    <rect x="0"   y="196" width="50" height="4"/>
+    <rect x="0"   y="192" width="42" height="4"/>
+    <rect x="0"   y="188" width="36" height="4"/>
+    <rect x="0"   y="184" width="30" height="4"/>
+    <rect x="0"   y="180" width="24" height="4"/>
+    <rect x="6"   y="176" width="14" height="4"/>
+    <rect x="10"  y="172" width="8"  height="4"/>
+    <!-- slope down to the right -->
+    <rect x="24"  y="180" width="18" height="4"/>
+    <rect x="36"  y="184" width="16" height="4"/>
+    <rect x="44"  y="188" width="20" height="4"/>
+    <!-- Mountain 2 (center-left big) -->
+    <rect x="60"  y="200" width="120" height="2"/>
+    <rect x="64"  y="196" width="110" height="4"/>
+    <rect x="70"  y="192" width="98"  height="4"/>
+    <rect x="78"  y="188" width="86"  height="4"/>
+    <rect x="86"  y="184" width="72"  height="4"/>
+    <rect x="94"  y="180" width="60"  height="4"/>
+    <rect x="102" y="176" width="46"  height="4"/>
+    <rect x="110" y="172" width="32"  height="4"/>
+    <rect x="116" y="168" width="22"  height="4"/>
+    <rect x="120" y="164" width="14"  height="4"/>
+    <rect x="124" y="160" width="6"   height="4"/>
+    <!-- Mountain 3 (right side) -->
+    <rect x="180" y="200" width="160" height="2"/>
+    <rect x="184" y="196" width="150" height="4"/>
+    <rect x="190" y="192" width="138" height="4"/>
+    <rect x="200" y="188" width="120" height="4"/>
+    <rect x="210" y="184" width="104" height="4"/>
+    <rect x="222" y="180" width="86"  height="4"/>
+    <rect x="232" y="176" width="70"  height="4"/>
+    <rect x="244" y="172" width="52"  height="4"/>
+    <rect x="254" y="168" width="38"  height="4"/>
+    <rect x="262" y="164" width="26"  height="4"/>
+    <rect x="268" y="160" width="16"  height="4"/>
+    <rect x="272" y="156" width="8"   height="4"/>
+    <!-- Mountain 4 (far right small range) -->
+    <rect x="340" y="200" width="560" height="2"/>
+    <rect x="340" y="196" width="160" height="4"/>
+    <rect x="350" y="192" width="60"  height="4"/>
+    <rect x="360" y="188" width="40"  height="4"/>
+    <rect x="370" y="184" width="22"  height="4"/>
+    <rect x="376" y="180" width="10"  height="4"/>
+    <rect x="500" y="196" width="120" height="4"/>
+    <rect x="510" y="192" width="100" height="4"/>
+    <rect x="520" y="188" width="76"  height="4"/>
+    <rect x="530" y="184" width="60"  height="4"/>
+    <rect x="540" y="180" width="44"  height="4"/>
+    <rect x="552" y="176" width="28"  height="4"/>
+    <rect x="558" y="172" width="16"  height="4"/>
+    <rect x="562" y="168" width="8"   height="4"/>
+    <rect x="620" y="196" width="280" height="4"/>
+    <rect x="700" y="192" width="180" height="4"/>
+    <rect x="730" y="188" width="120" height="4"/>
+    <rect x="760" y="184" width="80"  height="4"/>
+    <rect x="780" y="180" width="50"  height="4"/>
+    <rect x="794" y="176" width="28"  height="4"/>
+    <rect x="804" y="172" width="14"  height="4"/>
+  </g>
 
-  <!-- LAYER 4: Ground -->
-  <rect x="0"   y="240" width="900" height="60"  fill="#1a3a2a"/>
-  <rect x="0"   y="220" width="900" height="28"  fill="#2d6a4f"/>
-  <rect x="0"   y="212" width="12"  height="12"  fill="#52b788"/>
-  <rect x="20"  y="216" width="8"   height="8"   fill="#52b788"/>
-  <rect x="36"  y="212" width="12"  height="12"  fill="#52b788"/>
-  <rect x="60"  y="214" width="8"   height="10"  fill="#52b788"/>
-  <rect x="340" y="212" width="12"  height="12"  fill="#52b788"/>
-  <rect x="360" y="216" width="8"   height="8"   fill="#52b788"/>
-  <rect x="420" y="213" width="10"  height="11"  fill="#52b788"/>
-  <rect x="500" y="212" width="12"  height="12"  fill="#52b788"/>
-  <rect x="620" y="214" width="8"   height="10"  fill="#52b788"/>
-  <rect x="700" y="212" width="12"  height="12"  fill="#52b788"/>
-  <rect x="800" y="213" width="10"  height="11"  fill="#52b788"/>
-  <rect x="880" y="212" width="12"  height="12"  fill="#52b788"/>
-  <!-- Flowers -->
-  <rect x="300" y="215" width="8"   height="8"   fill="#f4a261"/>
-  <rect x="304" y="212" width="4"   height="4"   fill="#e9c46a"/>
-  <rect x="296" y="218" width="4"   height="4"   fill="#f4a261"/>
-  <rect x="308" y="218" width="4"   height="4"   fill="#f4a261"/>
-  <rect x="450" y="213" width="8"   height="8"   fill="#f4a261"/>
-  <rect x="454" y="210" width="4"   height="4"   fill="#e9c46a"/>
-  <rect x="560" y="215" width="8"   height="8"   fill="#f4a261"/>
-  <rect x="564" y="212" width="4"   height="4"   fill="#e9c46a"/>
+  <!-- ============ FAR TREES (silhouette layer 2) ============ -->
+  <g fill="#0D1820">
+    <!-- Base ground band -->
+    <rect x="0" y="216" width="900" height="6"/>
+    <!-- Tree silhouettes far -->
+    <rect x="40"  y="210" width="2" height="6"/>
+    <rect x="44"  y="206" width="4" height="10"/>
+    <rect x="50"  y="208" width="2" height="8"/>
+    <rect x="80"  y="208" width="2" height="8"/>
+    <rect x="84"  y="204" width="4" height="12"/>
+    <rect x="90"  y="208" width="2" height="8"/>
+    <rect x="130" y="206" width="2" height="10"/>
+    <rect x="134" y="202" width="6" height="14"/>
+    <rect x="142" y="206" width="2" height="10"/>
+    <rect x="190" y="208" width="2" height="8"/>
+    <rect x="194" y="204" width="4" height="12"/>
+    <rect x="200" y="206" width="2" height="10"/>
+    <rect x="250" y="208" width="2" height="8"/>
+    <rect x="254" y="204" width="4" height="12"/>
+    <rect x="260" y="208" width="2" height="8"/>
+    <rect x="310" y="206" width="2" height="10"/>
+    <rect x="314" y="202" width="6" height="14"/>
+    <rect x="322" y="206" width="2" height="10"/>
+    <rect x="380" y="208" width="2" height="8"/>
+    <rect x="384" y="204" width="4" height="12"/>
+    <rect x="390" y="208" width="2" height="8"/>
+    <rect x="450" y="206" width="2" height="10"/>
+    <rect x="454" y="202" width="6" height="14"/>
+    <rect x="462" y="206" width="2" height="10"/>
+    <rect x="520" y="208" width="2" height="8"/>
+    <rect x="524" y="204" width="4" height="12"/>
+    <rect x="530" y="208" width="2" height="8"/>
+    <rect x="580" y="208" width="2" height="8"/>
+    <rect x="584" y="204" width="4" height="12"/>
+    <rect x="590" y="208" width="2" height="8"/>
+    <rect x="730" y="206" width="2" height="10"/>
+    <rect x="734" y="202" width="6" height="14"/>
+    <rect x="742" y="206" width="2" height="10"/>
+    <rect x="790" y="208" width="2" height="8"/>
+    <rect x="794" y="204" width="4" height="12"/>
+    <rect x="800" y="208" width="2" height="8"/>
+    <rect x="850" y="206" width="2" height="10"/>
+    <rect x="854" y="202" width="6" height="14"/>
+    <rect x="862" y="206" width="2" height="10"/>
+  </g>
 
-  <!-- LAYER 5: Tiger body (pixel art, 4px grid, center-left) -->
-  <g transform="translate(120, 160) scale(4)">
-    <rect x="3"  y="0" width="7" height="1" fill="#f4a261"/>
-    <rect x="2"  y="1" width="9" height="1" fill="#f4a261"/>
-    <rect x="3"  y="1" width="1" height="1" fill="#0d0d0d"/>
-    <rect x="8"  y="1" width="1" height="1" fill="#0d0d0d"/>
-    <rect x="1"  y="2" width="11" height="1" fill="#f4a261"/>
-    <rect x="3"  y="2" width="1"  height="1" fill="#ffffff"/>
-    <rect x="7"  y="2" width="1"  height="1" fill="#ffffff"/>
-    <rect x="1"  y="3" width="11" height="1" fill="#f4a261"/>
-    <rect x="2"  y="3" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="5"  y="3" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="9"  y="3" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="0"  y="4" width="13" height="1" fill="#f4a261"/>
-    <rect x="3"  y="4" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="7"  y="4" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="0"  y="5" width="13" height="1" fill="#f4a261"/>
-    <rect x="2"  y="5" width="8"  height="1" fill="#e9c46a"/>
-    <rect x="0"  y="6" width="13" height="1" fill="#f4a261"/>
-    <rect x="1"  y="6" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="4"  y="6" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="8"  y="6" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="11" y="6" width="1"  height="1" fill="#0d0d0d"/>
-    <rect x="0"  y="7" width="13" height="1" fill="#f4a261"/>
-    <rect x="2"  y="7" width="7"  height="1" fill="#e9c46a"/>
-    <rect x="1"  y="8" width="3"  height="1" fill="#f4a261"/>
-    <rect x="9"  y="8" width="3"  height="1" fill="#f4a261"/>
-    <rect x="1"  y="9" width="3"  height="1" fill="#0d0d0d"/>
-    <rect x="9"  y="9" width="3"  height="1" fill="#0d0d0d"/>
+  <!-- ============ MID TREES (silhouette layer 3) ============ -->
+  <g fill="#122218">
+    <!-- Mid-ground band -->
+    <rect x="0" y="228" width="900" height="8"/>
+    <!-- Pine trees (left cluster) -->
+    <!-- Tree A -->
+    <rect x="20"  y="222" width="2" height="6"/>
+    <rect x="18"  y="220" width="6" height="2"/>
+    <rect x="16"  y="218" width="10" height="2"/>
+    <rect x="18"  y="216" width="6" height="2"/>
+    <rect x="20"  y="214" width="2" height="2"/>
+    <!-- Tree B (bigger) -->
+    <rect x="56"  y="222" width="4" height="6"/>
+    <rect x="50"  y="220" width="14" height="2"/>
+    <rect x="52"  y="218" width="10" height="2"/>
+    <rect x="54"  y="216" width="6" height="2"/>
+    <rect x="56"  y="214" width="2" height="2"/>
+    <!-- Tree C -->
+    <rect x="100" y="222" width="2" height="6"/>
+    <rect x="96"  y="220" width="10" height="2"/>
+    <rect x="98"  y="218" width="6"  height="2"/>
+    <rect x="100" y="216" width="2"  height="2"/>
+    <!-- Tree D (large) -->
+    <rect x="146" y="222" width="6" height="6"/>
+    <rect x="138" y="220" width="22" height="2"/>
+    <rect x="140" y="218" width="18" height="2"/>
+    <rect x="142" y="216" width="14" height="2"/>
+    <rect x="144" y="214" width="10" height="2"/>
+    <rect x="146" y="212" width="6"  height="2"/>
+    <rect x="148" y="210" width="2"  height="2"/>
+    <!-- Mid trees right of tiger -->
+    <rect x="200" y="222" width="4" height="6"/>
+    <rect x="194" y="220" width="16" height="2"/>
+    <rect x="196" y="218" width="12" height="2"/>
+    <rect x="198" y="216" width="8"  height="2"/>
+    <rect x="200" y="214" width="4"  height="2"/>
+    <rect x="240" y="222" width="2" height="6"/>
+    <rect x="236" y="220" width="10" height="2"/>
+    <rect x="238" y="218" width="6"  height="2"/>
+    <rect x="240" y="216" width="2"  height="2"/>
+    <rect x="284" y="222" width="4" height="6"/>
+    <rect x="278" y="220" width="16" height="2"/>
+    <rect x="280" y="218" width="12" height="2"/>
+    <rect x="282" y="216" width="8"  height="2"/>
+    <rect x="284" y="214" width="4"  height="2"/>
+    <rect x="286" y="212" width="2"  height="2"/>
+    <rect x="330" y="222" width="2" height="6"/>
+    <rect x="326" y="220" width="10" height="2"/>
+    <rect x="328" y="218" width="6"  height="2"/>
+    <rect x="330" y="216" width="2"  height="2"/>
+    <rect x="370" y="222" width="6" height="6"/>
+    <rect x="362" y="220" width="22" height="2"/>
+    <rect x="364" y="218" width="18" height="2"/>
+    <rect x="366" y="216" width="14" height="2"/>
+    <rect x="368" y="214" width="10" height="2"/>
+    <rect x="370" y="212" width="6"  height="2"/>
+    <rect x="372" y="210" width="2"  height="2"/>
+    <rect x="420" y="222" width="4" height="6"/>
+    <rect x="414" y="220" width="16" height="2"/>
+    <rect x="416" y="218" width="12" height="2"/>
+    <rect x="418" y="216" width="8"  height="2"/>
+    <rect x="420" y="214" width="4"  height="2"/>
+    <rect x="462" y="222" width="2" height="6"/>
+    <rect x="458" y="220" width="10" height="2"/>
+    <rect x="460" y="218" width="6"  height="2"/>
+    <rect x="462" y="216" width="2"  height="2"/>
+    <rect x="500" y="222" width="4" height="6"/>
+    <rect x="494" y="220" width="16" height="2"/>
+    <rect x="496" y="218" width="12" height="2"/>
+    <rect x="498" y="216" width="8"  height="2"/>
+    <rect x="500" y="214" width="4"  height="2"/>
+    <rect x="540" y="222" width="2" height="6"/>
+    <rect x="536" y="220" width="10" height="2"/>
+    <rect x="538" y="218" width="6"  height="2"/>
+    <rect x="540" y="216" width="2"  height="2"/>
+    <rect x="580" y="222" width="6" height="6"/>
+    <rect x="572" y="220" width="22" height="2"/>
+    <rect x="574" y="218" width="18" height="2"/>
+    <rect x="576" y="216" width="14" height="2"/>
+    <rect x="578" y="214" width="10" height="2"/>
+    <rect x="580" y="212" width="6"  height="2"/>
+    <rect x="582" y="210" width="2"  height="2"/>
+    <rect x="630" y="222" width="4" height="6"/>
+    <rect x="624" y="220" width="16" height="2"/>
+    <rect x="626" y="218" width="12" height="2"/>
+    <rect x="628" y="216" width="8"  height="2"/>
+    <rect x="630" y="214" width="4"  height="2"/>
+    <rect x="670" y="222" width="2" height="6"/>
+    <rect x="666" y="220" width="10" height="2"/>
+    <rect x="668" y="218" width="6"  height="2"/>
+    <rect x="670" y="216" width="2"  height="2"/>
+    <rect x="710" y="222" width="4" height="6"/>
+    <rect x="704" y="220" width="16" height="2"/>
+    <rect x="706" y="218" width="12" height="2"/>
+    <rect x="708" y="216" width="8"  height="2"/>
+    <rect x="710" y="214" width="4"  height="2"/>
+    <rect x="752" y="222" width="6" height="6"/>
+    <rect x="744" y="220" width="22" height="2"/>
+    <rect x="746" y="218" width="18" height="2"/>
+    <rect x="748" y="216" width="14" height="2"/>
+    <rect x="750" y="214" width="10" height="2"/>
+    <rect x="752" y="212" width="6"  height="2"/>
+    <rect x="754" y="210" width="2"  height="2"/>
+    <rect x="804" y="222" width="2" height="6"/>
+    <rect x="800" y="220" width="10" height="2"/>
+    <rect x="802" y="218" width="6"  height="2"/>
+    <rect x="804" y="216" width="2"  height="2"/>
+    <rect x="844" y="222" width="4" height="6"/>
+    <rect x="838" y="220" width="16" height="2"/>
+    <rect x="840" y="218" width="12" height="2"/>
+    <rect x="842" y="216" width="8"  height="2"/>
+    <rect x="844" y="214" width="4"  height="2"/>
+    <rect x="884" y="222" width="2" height="6"/>
+    <rect x="880" y="220" width="10" height="2"/>
+    <rect x="882" y="218" width="6"  height="2"/>
+    <rect x="884" y="216" width="2"  height="2"/>
+  </g>
 
-    <!-- Tail with SMIL rotate animation -->
-    <g>
-      <animateTransform attributeName="transform" type="rotate"
-        values="0 0 16; 20 0 16; 0 0 16; -20 0 16; 0 0 16"
-        dur="1.6s" repeatCount="indefinite"/>
-      <rect x="13" y="4" width="1" height="1" fill="#f4a261"/>
-      <rect x="14" y="3" width="1" height="1" fill="#f4a261"/>
-      <rect x="14" y="4" width="1" height="1" fill="#0d0d0d"/>
-      <rect x="15" y="2" width="1" height="1" fill="#f4a261"/>
-      <rect x="15" y="3" width="1" height="1" fill="#f4a261"/>
-      <rect x="16" y="1" width="2" height="2" fill="#f4a261"/>
+  <!-- ============ NEAR TREES (silhouette layer 4, framing sides) ============ -->
+  <g fill="#162C1C">
+    <!-- LEFT framing tree (tall pine) -->
+    <rect x="2"   y="240" width="14" height="20"/>
+    <rect x="0"   y="232" width="18" height="8"/>
+    <rect x="2"   y="224" width="14" height="8"/>
+    <rect x="4"   y="216" width="10" height="8"/>
+    <rect x="6"   y="208" width="6"  height="8"/>
+    <rect x="8"   y="202" width="2"  height="6"/>
+    <!-- Second left tree (smaller pine) -->
+    <rect x="22"  y="244" width="8"  height="16"/>
+    <rect x="20"  y="238" width="12" height="6"/>
+    <rect x="22"  y="232" width="8"  height="6"/>
+    <rect x="24"  y="226" width="4"  height="6"/>
+    <rect x="25"  y="222" width="2"  height="4"/>
+    <!-- RIGHT framing tree (tall pine) -->
+    <rect x="884" y="240" width="14" height="20"/>
+    <rect x="882" y="232" width="18" height="8"/>
+    <rect x="884" y="224" width="14" height="8"/>
+    <rect x="886" y="216" width="10" height="8"/>
+    <rect x="888" y="208" width="6"  height="8"/>
+    <rect x="890" y="202" width="2"  height="6"/>
+    <!-- Second right tree -->
+    <rect x="868" y="244" width="8"  height="16"/>
+    <rect x="866" y="238" width="12" height="6"/>
+    <rect x="868" y="232" width="8"  height="6"/>
+    <rect x="870" y="226" width="4"  height="6"/>
+    <rect x="871" y="222" width="2"  height="4"/>
+    <!-- Tiny ground shrubs across the foreground -->
+    <rect x="200" y="240" width="4" height="2"/>
+    <rect x="198" y="242" width="8" height="2"/>
+    <rect x="350" y="240" width="4" height="2"/>
+    <rect x="348" y="242" width="8" height="2"/>
+    <rect x="500" y="240" width="4" height="2"/>
+    <rect x="498" y="242" width="8" height="2"/>
+    <rect x="620" y="240" width="4" height="2"/>
+    <rect x="618" y="242" width="8" height="2"/>
+    <rect x="780" y="240" width="4" height="2"/>
+    <rect x="778" y="242" width="8" height="2"/>
+  </g>
+
+  <!-- ============ GROUND (foreground) ============ -->
+  <rect x="0" y="250" width="900" height="50" fill="#0F1E10"/>
+  <!-- Ground dither/grass highlight on top edge -->
+  <g fill="#1A2E14">
+    <rect x="0"   y="250" width="900" height="2"/>
+    <rect x="20"  y="252" width="2" height="2"/><rect x="46"  y="252" width="2" height="2"/>
+    <rect x="78"  y="252" width="2" height="2"/><rect x="112" y="252" width="2" height="2"/>
+    <rect x="146" y="252" width="2" height="2"/><rect x="180" y="252" width="2" height="2"/>
+    <rect x="214" y="252" width="2" height="2"/><rect x="248" y="252" width="2" height="2"/>
+    <rect x="282" y="252" width="2" height="2"/><rect x="316" y="252" width="2" height="2"/>
+    <rect x="350" y="252" width="2" height="2"/><rect x="384" y="252" width="2" height="2"/>
+    <rect x="418" y="252" width="2" height="2"/><rect x="452" y="252" width="2" height="2"/>
+    <rect x="486" y="252" width="2" height="2"/><rect x="520" y="252" width="2" height="2"/>
+    <rect x="554" y="252" width="2" height="2"/><rect x="588" y="252" width="2" height="2"/>
+    <rect x="622" y="252" width="2" height="2"/><rect x="656" y="252" width="2" height="2"/>
+    <rect x="690" y="252" width="2" height="2"/><rect x="724" y="252" width="2" height="2"/>
+    <rect x="758" y="252" width="2" height="2"/><rect x="792" y="252" width="2" height="2"/>
+    <rect x="826" y="252" width="2" height="2"/><rect x="860" y="252" width="2" height="2"/>
+    <!-- small grass tufts -->
+    <rect x="120" y="248" width="2" height="2"/><rect x="118" y="246" width="2" height="2"/>
+    <rect x="240" y="248" width="2" height="2"/><rect x="244" y="246" width="2" height="2"/>
+    <rect x="430" y="248" width="2" height="2"/><rect x="432" y="246" width="2" height="2"/>
+    <rect x="560" y="248" width="2" height="2"/><rect x="558" y="246" width="2" height="2"/>
+    <rect x="700" y="248" width="2" height="2"/><rect x="704" y="246" width="2" height="2"/>
+    <rect x="820" y="248" width="2" height="2"/><rect x="818" y="246" width="2" height="2"/>
+  </g>
+  <!-- Ground shadow band (deeper at bottom) -->
+  <rect x="0" y="280" width="900" height="20" fill="#0A1408"/>
+  <g fill="#0F1E10">
+    <rect x="20" y="280" width="4" height="2"/><rect x="80" y="280" width="4" height="2"/>
+    <rect x="160" y="280" width="4" height="2"/><rect x="260" y="280" width="4" height="2"/>
+    <rect x="360" y="280" width="4" height="2"/><rect x="460" y="280" width="4" height="2"/>
+    <rect x="560" y="280" width="4" height="2"/><rect x="660" y="280" width="4" height="2"/>
+    <rect x="760" y="280" width="4" height="2"/><rect x="840" y="280" width="4" height="2"/>
+  </g>
+
+  <!-- ============ MOON REFLECTION ON GROUND (subtle warm light pool) ============ -->
+  <g opacity="0.18">
+    <rect x="500" y="252" width="240" height="2" fill="#5A4628"/>
+    <rect x="480" y="254" width="280" height="2" fill="#4A3820"/>
+    <rect x="470" y="256" width="300" height="2" fill="#3A2C18"/>
+  </g>
+
+  <!-- ============ FIREFLIES ============ -->
+  <g fill="#AEFF60">
+    <circle cx="320" cy="190" r="2">
+      <animate attributeName="opacity" values="0;1;0" dur="3.4s" begin="0s"   repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="210" r="2">
+      <animate attributeName="opacity" values="0;1;0" dur="4s"   begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="220" r="1.5">
+      <animate attributeName="opacity" values="0;1;0" dur="3.6s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="180" r="1.5">
+      <animate attributeName="opacity" values="0;1;0" dur="3.2s" begin="2.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="540" cy="200" r="2">
+      <animate attributeName="opacity" values="0;1;0" dur="4.2s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="610" cy="220" r="1.5">
+      <animate attributeName="opacity" values="0;1;0" dur="3.8s" begin="1.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="190" r="2">
+      <animate attributeName="opacity" values="0;1;0" dur="3.5s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="760" cy="230" r="1.5">
+      <animate attributeName="opacity" values="0;1;0" dur="4s"   begin="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ============ FALLING LEAVES ============ -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,-20;30,320" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="14s" repeatCount="indefinite"/>
+    <rect x="220" y="0" width="2" height="2" fill="#162C1C"/>
+    <rect x="222" y="2" width="2" height="2" fill="#0D1820"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,-30;-20,330" dur="18s" begin="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="18s" begin="3s" repeatCount="indefinite"/>
+    <rect x="460" y="0" width="2" height="2" fill="#162C1C"/>
+    <rect x="458" y="2" width="2" height="2" fill="#0D1820"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,-40;40,340" dur="16s" begin="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="16s" begin="6s" repeatCount="indefinite"/>
+    <rect x="700" y="0" width="2" height="2" fill="#162C1C"/>
+    <rect x="702" y="2" width="2" height="2" fill="#0D1820"/>
+  </g>
+
+  <!-- ====================================================================
+       TIGER (sitting, 3/4 view facing right)
+       Logical pixel grid 25..85 cols, 65..148 rows (origin x=50, y=130 SVG units)
+       Built from back to front: rear haunch shadow -> body -> stripes -> face details
+       ==================================================================== -->
+
+  <!-- ===== TAIL (curls from right rear around to right side) ===== -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="0 184 240;3 184 240;0 184 240;-2 184 240;0 184 240" dur="6s" repeatCount="indefinite"/>
+    <!-- tail base attaching to haunch -->
+    <g fill="#A04010">
+      <rect x="178" y="232" width="6"  height="4"/>
+      <rect x="184" y="230" width="6"  height="4"/>
+      <rect x="190" y="228" width="6"  height="4"/>
+      <rect x="196" y="226" width="4"  height="4"/>
+      <rect x="200" y="224" width="4"  height="4"/>
+      <rect x="204" y="222" width="4"  height="4"/>
+      <rect x="206" y="218" width="4"  height="4"/>
+      <rect x="208" y="214" width="4"  height="4"/>
+      <rect x="208" y="210" width="4"  height="4"/>
+      <rect x="206" y="206" width="4"  height="4"/>
+    </g>
+    <!-- tail highlight top -->
+    <g fill="#D06020">
+      <rect x="184" y="230" width="6" height="2"/>
+      <rect x="192" y="228" width="4" height="2"/>
+      <rect x="200" y="224" width="4" height="2"/>
+      <rect x="206" y="218" width="2" height="4"/>
+      <rect x="206" y="210" width="2" height="4"/>
+    </g>
+    <!-- tail stripes -->
+    <g fill="#180800">
+      <rect x="180" y="232" width="2" height="4"/>
+      <rect x="194" y="228" width="2" height="4"/>
+      <rect x="204" y="222" width="2" height="4"/>
+      <rect x="208" y="214" width="2" height="2"/>
+      <rect x="208" y="208" width="2" height="2"/>
+    </g>
+    <!-- tail dark tip -->
+    <g fill="#180800">
+      <rect x="204" y="204" width="6" height="4"/>
+      <rect x="206" y="200" width="4" height="4"/>
     </g>
   </g>
 
-  <!-- Falling leaf 1 with SMIL translate -->
-  <g>
-    <animateTransform attributeName="transform" type="translate"
-      values="200,0; 230,280" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="1;1;0" dur="8s" repeatCount="indefinite"/>
-    <rect width="8" height="8" fill="#52b788"/>
-    <rect x="2" y="2" width="4" height="4" fill="#2d6a4f"/>
+  <!-- ===== REAR HAUNCH (sitting form) ===== -->
+  <!-- Base silhouette: large rounded mass on right side of body -->
+  <g fill="#6B2800">
+    <!-- shadow underside of haunch -->
+    <rect x="148" y="240" width="50" height="8"/>
+    <rect x="146" y="236" width="52" height="6"/>
+    <rect x="148" y="232" width="48" height="6"/>
+    <rect x="150" y="228" width="42" height="6"/>
+    <rect x="154" y="224" width="34" height="6"/>
+    <rect x="158" y="220" width="26" height="6"/>
+    <rect x="162" y="216" width="18" height="6"/>
   </g>
-  <!-- Falling leaf 2 -->
-  <g>
-    <animateTransform attributeName="transform" type="translate"
-      values="480,0; 460,280" dur="11s" begin="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.8;0" dur="11s" begin="3s" repeatCount="indefinite"/>
-    <rect width="8" height="8" fill="#52b788"/>
-    <rect x="2" y="2" width="4" height="4" fill="#2d6a4f"/>
+  <!-- Main haunch body color -->
+  <g fill="#A04010">
+    <rect x="148" y="234" width="50" height="6"/>
+    <rect x="150" y="228" width="46" height="6"/>
+    <rect x="154" y="222" width="38" height="6"/>
+    <rect x="158" y="218" width="30" height="6"/>
+    <rect x="162" y="214" width="22" height="6"/>
+    <rect x="166" y="210" width="14" height="6"/>
   </g>
-  <!-- Falling leaf 3 (orange) -->
-  <g>
-    <animateTransform attributeName="transform" type="translate"
-      values="650,0; 680,280" dur="9s" begin="5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="1;1;0" dur="9s" begin="5s" repeatCount="indefinite"/>
-    <rect width="8" height="8" fill="#f4a261"/>
-    <rect x="2" y="2" width="4" height="4" fill="#e9c46a"/>
+  <!-- Haunch top highlight -->
+  <g fill="#D06020">
+    <rect x="152" y="226" width="42" height="4"/>
+    <rect x="156" y="220" width="34" height="4"/>
+    <rect x="160" y="216" width="26" height="4"/>
+    <rect x="164" y="212" width="18" height="4"/>
+    <rect x="168" y="208" width="10" height="4"/>
   </g>
-
-  <!-- Butterfly 1 moving right -->
-  <g>
-    <animateTransform attributeName="transform" type="translate"
-      values="-60,80; 960,40" dur="14s" begin="2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="14s" begin="2s" repeatCount="indefinite"/>
-    <rect x="0" y="2" width="6" height="4" fill="#e9c46a"/>
-    <rect x="6" y="0" width="2" height="2" fill="#e9c46a"/>
-    <rect x="6" y="6" width="2" height="2" fill="#e9c46a"/>
-    <rect x="6" y="3" width="2" height="2" fill="#0d0d0d"/>
-  </g>
-  <!-- Butterfly 2 -->
-  <g>
-    <animateTransform attributeName="transform" type="translate"
-      values="-60,130; 960,190" dur="18s" begin="7s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="18s" begin="7s" repeatCount="indefinite"/>
-    <rect x="0" y="2" width="6" height="4" fill="#f4a261"/>
-    <rect x="6" y="0" width="2" height="2" fill="#f4a261"/>
-    <rect x="6" y="6" width="2" height="2" fill="#f4a261"/>
-    <rect x="6" y="3" width="2" height="2" fill="#0d0d0d"/>
+  <g fill="#E88030">
+    <rect x="160" y="218" width="22" height="2"/>
+    <rect x="164" y="214" width="16" height="2"/>
+    <rect x="168" y="210" width="10" height="2"/>
   </g>
 
-  <!-- Text -->
-  <text x="720" y="60" font-family="monospace" font-size="18" fill="#f4a261" text-anchor="middle" font-weight="bold">pcastilhodev</text>
-  <rect x="630" y="68" width="180" height="3" fill="#f4a261"/>
-  <text x="720" y="95" font-family="monospace" font-size="9" fill="#e9c46a" text-anchor="middle">software developer</text>
+  <!-- ===== BACK / BODY MAIN MASS ===== -->
+  <g fill="#A04010">
+    <!-- back stretching from neck to haunch -->
+    <rect x="100" y="210" width="64" height="8"/>
+    <rect x="96"  y="216" width="68" height="8"/>
+    <rect x="92"  y="224" width="72" height="10"/>
+    <rect x="92"  y="234" width="64" height="8"/>
+  </g>
+  <!-- Top of back highlight (lit from upper-right by moon) -->
+  <g fill="#D06020">
+    <rect x="100" y="210" width="64" height="4"/>
+    <rect x="96"  y="216" width="68" height="2"/>
+  </g>
+  <g fill="#E88030">
+    <rect x="104" y="210" width="56" height="2"/>
+  </g>
+
+  <!-- ===== CHEST / FRONT BODY ===== -->
+  <!-- Chest silhouette -->
+  <g fill="#A04010">
+    <rect x="80"  y="208" width="28" height="6"/>
+    <rect x="76"  y="214" width="32" height="8"/>
+    <rect x="74"  y="222" width="34" height="10"/>
+    <rect x="74"  y="232" width="32" height="10"/>
+  </g>
+  <!-- Chest cream/belly -->
+  <g fill="#F5DDB0">
+    <rect x="84"  y="216" width="20" height="4"/>
+    <rect x="82"  y="220" width="22" height="6"/>
+    <rect x="82"  y="226" width="20" height="6"/>
+    <rect x="84"  y="232" width="16" height="8"/>
+    <rect x="86"  y="240" width="12" height="6"/>
+  </g>
+  <!-- Cream shading edges -->
+  <g fill="#D9B98A">
+    <rect x="84"  y="216" width="2" height="4"/>
+    <rect x="82"  y="220" width="2" height="6"/>
+    <rect x="100" y="220" width="4" height="2"/>
+    <rect x="100" y="232" width="2" height="6"/>
+    <rect x="86"  y="244" width="10" height="2"/>
+  </g>
+  <!-- Chest top highlight -->
+  <g fill="#D06020">
+    <rect x="80"  y="208" width="28" height="2"/>
+    <rect x="78"  y="214" width="30" height="2"/>
+  </g>
+  <g fill="#E88030">
+    <rect x="84"  y="208" width="20" height="2"/>
+  </g>
+
+  <!-- ===== FRONT LEGS ===== -->
+  <!-- Left front leg (viewer left) -->
+  <g fill="#A04010">
+    <rect x="76"  y="242" width="14" height="20"/>
+    <rect x="74"  y="262" width="20" height="8"/>
+  </g>
+  <g fill="#6B2800">
+    <rect x="76"  y="258" width="4" height="12"/>
+    <rect x="74"  y="262" width="2" height="8"/>
+  </g>
+  <g fill="#D06020">
+    <rect x="86"  y="242" width="4" height="20"/>
+    <rect x="88"  y="262" width="6" height="6"/>
+  </g>
+  <!-- Left paw -->
+  <g fill="#F5DDB0">
+    <rect x="76"  y="266" width="18" height="4"/>
+  </g>
+  <g fill="#D9B98A">
+    <rect x="74"  y="268" width="20" height="2"/>
+  </g>
+  <!-- Toe separations on left paw -->
+  <g fill="#6B2800">
+    <rect x="80"  y="266" width="2" height="4"/>
+    <rect x="86"  y="266" width="2" height="4"/>
+  </g>
+
+  <!-- Right front leg (slightly behind / inside) -->
+  <g fill="#A04010">
+    <rect x="100" y="244" width="14" height="18"/>
+    <rect x="98"  y="262" width="20" height="8"/>
+  </g>
+  <g fill="#6B2800">
+    <rect x="100" y="258" width="2" height="12"/>
+    <rect x="98"  y="262" width="2" height="8"/>
+    <rect x="112" y="244" width="2" height="18"/>
+  </g>
+  <g fill="#D06020">
+    <rect x="108" y="244" width="4" height="18"/>
+  </g>
+  <!-- Right paw -->
+  <g fill="#F5DDB0">
+    <rect x="100" y="266" width="18" height="4"/>
+  </g>
+  <g fill="#D9B98A">
+    <rect x="98"  y="268" width="20" height="2"/>
+  </g>
+  <g fill="#6B2800">
+    <rect x="104" y="266" width="2" height="4"/>
+    <rect x="110" y="266" width="2" height="4"/>
+  </g>
+
+  <!-- ===== BODY STRIPES ===== -->
+  <g fill="#180800">
+    <!-- Back/side stripes (curving over the back) -->
+    <rect x="106" y="210" width="2" height="8"/>
+    <rect x="104" y="216" width="4" height="2"/>
+    <rect x="120" y="210" width="2" height="10"/>
+    <rect x="118" y="218" width="6" height="2"/>
+    <rect x="134" y="210" width="2" height="12"/>
+    <rect x="132" y="218" width="6" height="2"/>
+    <rect x="148" y="212" width="2" height="14"/>
+    <rect x="146" y="220" width="6" height="2"/>
+    <rect x="160" y="216" width="2" height="14"/>
+    <!-- Haunch stripes (curving around) -->
+    <rect x="168" y="216" width="2" height="14"/>
+    <rect x="176" y="220" width="2" height="14"/>
+    <rect x="184" y="226" width="2" height="12"/>
+    <rect x="190" y="232" width="2" height="8"/>
+    <!-- Side stripes near belly -->
+    <rect x="108" y="228" width="2" height="10"/>
+    <rect x="120" y="232" width="2" height="10"/>
+    <rect x="132" y="234" width="2" height="8"/>
+    <rect x="144" y="236" width="2" height="6"/>
+    <!-- Leg stripes -->
+    <rect x="78"  y="248" width="10" height="2"/>
+    <rect x="80"  y="254" width="8"  height="2"/>
+    <rect x="78"  y="260" width="10" height="2"/>
+    <rect x="102" y="248" width="10" height="2"/>
+    <rect x="104" y="254" width="8"  height="2"/>
+    <rect x="102" y="260" width="10" height="2"/>
+  </g>
+  <!-- Stripe mid-tones (softens edges, KTK style) -->
+  <g fill="#301000">
+    <rect x="108" y="210" width="2" height="2"/>
+    <rect x="122" y="210" width="2" height="2"/>
+    <rect x="136" y="210" width="2" height="2"/>
+    <rect x="150" y="212" width="2" height="2"/>
+    <rect x="162" y="216" width="2" height="2"/>
+    <rect x="170" y="216" width="2" height="2"/>
+    <rect x="178" y="220" width="2" height="2"/>
+    <rect x="186" y="226" width="2" height="2"/>
+    <rect x="110" y="228" width="2" height="2"/>
+    <rect x="122" y="232" width="2" height="2"/>
+    <rect x="134" y="234" width="2" height="2"/>
+  </g>
+
+  <!-- ====================================================================
+       TIGER HEAD (rows 130-186 SVG, cols 70-150)
+       ==================================================================== -->
+
+  <!-- ===== EARS ===== -->
+  <!-- Left ear (back) -->
+  <g fill="#6B2800">
+    <rect x="86"  y="130" width="10" height="2"/>
+    <rect x="84"  y="132" width="14" height="2"/>
+    <rect x="84"  y="134" width="14" height="4"/>
+    <rect x="86"  y="138" width="12" height="2"/>
+  </g>
+  <g fill="#A04010">
+    <rect x="86"  y="132" width="10" height="2"/>
+    <rect x="86"  y="134" width="10" height="2"/>
+  </g>
+  <!-- Left ear inner -->
+  <g fill="#C05040">
+    <rect x="88"  y="134" width="6" height="4"/>
+  </g>
+  <g fill="#180800">
+    <rect x="88"  y="136" width="6" height="2"/>
+  </g>
+  <!-- Right ear -->
+  <g fill="#6B2800">
+    <rect x="118" y="130" width="10" height="2"/>
+    <rect x="116" y="132" width="14" height="2"/>
+    <rect x="116" y="134" width="14" height="4"/>
+    <rect x="118" y="138" width="12" height="2"/>
+  </g>
+  <g fill="#A04010">
+    <rect x="118" y="132" width="10" height="2"/>
+    <rect x="118" y="134" width="10" height="2"/>
+  </g>
+  <g fill="#C05040">
+    <rect x="120" y="134" width="6" height="4"/>
+  </g>
+  <g fill="#180800">
+    <rect x="120" y="136" width="6" height="2"/>
+  </g>
+  <!-- Ear top highlight -->
+  <g fill="#D06020">
+    <rect x="88"  y="132" width="6" height="2"/>
+    <rect x="120" y="132" width="6" height="2"/>
+  </g>
+
+  <!-- ===== HEAD SILHOUETTE (broad rounded head, 3/4 view) ===== -->
+  <!-- Deepest shadow layer (left & under) -->
+  <g fill="#6B2800">
+    <rect x="78"  y="140" width="60" height="6"/>
+    <rect x="76"  y="146" width="62" height="6"/>
+    <rect x="76"  y="152" width="62" height="6"/>
+    <rect x="78"  y="158" width="60" height="6"/>
+    <rect x="80"  y="164" width="56" height="6"/>
+    <rect x="84"  y="170" width="48" height="6"/>
+    <rect x="88"  y="176" width="40" height="4"/>
+    <rect x="92"  y="180" width="32" height="4"/>
+    <rect x="96"  y="184" width="24" height="2"/>
+  </g>
+  <!-- Main fur body color -->
+  <g fill="#A04010">
+    <rect x="80"  y="140" width="58" height="6"/>
+    <rect x="78"  y="146" width="60" height="6"/>
+    <rect x="78"  y="152" width="60" height="6"/>
+    <rect x="80"  y="158" width="58" height="6"/>
+    <rect x="82"  y="164" width="54" height="6"/>
+    <rect x="86"  y="170" width="46" height="6"/>
+    <rect x="90"  y="176" width="38" height="4"/>
+    <rect x="94"  y="180" width="30" height="4"/>
+  </g>
+  <!-- Highlight on top/right of head -->
+  <g fill="#D06020">
+    <rect x="98"  y="140" width="32" height="4"/>
+    <rect x="96"  y="144" width="36" height="2"/>
+    <rect x="118" y="146" width="14" height="6"/>
+    <rect x="120" y="152" width="14" height="4"/>
+    <rect x="122" y="156" width="12" height="4"/>
+    <rect x="124" y="160" width="10" height="4"/>
+    <rect x="126" y="164" width="8"  height="4"/>
+  </g>
+  <g fill="#E88030">
+    <rect x="102" y="140" width="22" height="2"/>
+    <rect x="122" y="146" width="8"  height="4"/>
+    <rect x="124" y="152" width="8"  height="2"/>
+    <rect x="126" y="156" width="6"  height="2"/>
+  </g>
+  <g fill="#F4A050">
+    <rect x="106" y="140" width="14" height="2"/>
+    <rect x="124" y="148" width="4"  height="2"/>
+  </g>
+
+  <!-- ===== MUZZLE (cream, lower-center of face) ===== -->
+  <g fill="#F5DDB0">
+    <rect x="96"  y="170" width="22" height="4"/>
+    <rect x="94"  y="174" width="26" height="4"/>
+    <rect x="94"  y="178" width="26" height="4"/>
+    <rect x="96"  y="182" width="22" height="2"/>
+  </g>
+  <g fill="#D9B98A">
+    <rect x="94"  y="178" width="2"  height="4"/>
+    <rect x="118" y="178" width="2"  height="4"/>
+    <rect x="96"  y="184" width="22" height="2"/>
+  </g>
+  <!-- Mouth line / under-muzzle shadow -->
+  <g fill="#6B2800">
+    <rect x="100" y="184" width="14" height="2"/>
+    <rect x="104" y="186" width="6"  height="2"/>
+  </g>
+  <!-- Chin highlight (small bottom cream) -->
+  <g fill="#F5DDB0">
+    <rect x="102" y="186" width="10" height="2"/>
+  </g>
+
+  <!-- ===== NOSE ===== -->
+  <g fill="#C04030">
+    <rect x="102" y="172" width="10" height="4"/>
+    <rect x="104" y="176" width="6"  height="2"/>
+  </g>
+  <g fill="#180800">
+    <rect x="104" y="172" width="6"  height="2"/>
+    <rect x="106" y="176" width="2"  height="2"/>
+  </g>
+  <!-- Tiny nose highlight -->
+  <g fill="#F4A050">
+    <rect x="108" y="172" width="2"  height="2"/>
+  </g>
+
+  <!-- ===== EYES ===== -->
+  <!-- Left eye -->
+  <g fill="#180800">
+    <rect x="92"  y="156" width="10" height="6"/>
+  </g>
+  <g fill="#D4900C">
+    <rect x="94"  y="158" width="6" height="4"/>
+  </g>
+  <g fill="#FFEE60">
+    <rect x="94"  y="158" width="4" height="2"/>
+  </g>
+  <g fill="#0C0400">
+    <rect x="96"  y="158" width="2" height="4"/>
+  </g>
+  <g fill="#FFFFFF">
+    <rect x="94"  y="158" width="2" height="2"/>
+  </g>
+  <!-- Right eye -->
+  <g fill="#180800">
+    <rect x="114" y="156" width="10" height="6"/>
+  </g>
+  <g fill="#D4900C">
+    <rect x="116" y="158" width="6" height="4"/>
+  </g>
+  <g fill="#FFEE60">
+    <rect x="116" y="158" width="4" height="2"/>
+  </g>
+  <g fill="#0C0400">
+    <rect x="118" y="158" width="2" height="4"/>
+  </g>
+  <g fill="#FFFFFF">
+    <rect x="116" y="158" width="2" height="2"/>
+  </g>
+
+  <!-- ===== FACE STRIPES ===== -->
+  <g fill="#180800">
+    <!-- Forehead vertical stripes (between eyes, classic tiger) -->
+    <rect x="104" y="140" width="2" height="14"/>
+    <rect x="110" y="140" width="2" height="14"/>
+    <rect x="98"  y="142" width="2" height="10"/>
+    <rect x="116" y="142" width="2" height="10"/>
+    <!-- Side / cheek stripes (left side, sweeping back) -->
+    <rect x="82"  y="148" width="2" height="6"/>
+    <rect x="78"  y="152" width="6" height="2"/>
+    <rect x="82"  y="158" width="2" height="6"/>
+    <rect x="78"  y="162" width="6" height="2"/>
+    <rect x="86"  y="166" width="6" height="2"/>
+    <!-- Side / cheek stripes (right) -->
+    <rect x="134" y="148" width="2" height="6"/>
+    <rect x="132" y="152" width="6" height="2"/>
+    <rect x="134" y="158" width="2" height="6"/>
+    <rect x="132" y="162" width="6" height="2"/>
+    <rect x="128" y="166" width="6" height="2"/>
+    <!-- Eye accent stripes (above brow) -->
+    <rect x="86"  y="154" width="6" height="2"/>
+    <rect x="124" y="154" width="6" height="2"/>
+  </g>
+  <!-- Whisker dots on muzzle -->
+  <g fill="#301000">
+    <rect x="96"  y="178" width="2" height="2"/>
+    <rect x="100" y="180" width="2" height="2"/>
+    <rect x="114" y="180" width="2" height="2"/>
+    <rect x="116" y="178" width="2" height="2"/>
+  </g>
+
+  <!-- ===== NECK / CHIN CONNECTION (shadow under jaw) ===== -->
+  <g fill="#6B2800">
+    <rect x="92"  y="188" width="32" height="4"/>
+    <rect x="96"  y="192" width="24" height="4"/>
+  </g>
+  <g fill="#A04010">
+    <rect x="94"  y="188" width="28" height="2"/>
+  </g>
+  <!-- Neck cream highlight (chest connection) -->
+  <g fill="#F5DDB0">
+    <rect x="100" y="194" width="16" height="4"/>
+    <rect x="98"  y="198" width="20" height="4"/>
+    <rect x="96"  y="202" width="24" height="6"/>
+  </g>
+  <g fill="#D9B98A">
+    <rect x="98"  y="206" width="20" height="2"/>
+  </g>
+
+  <!-- Subtle eye-glow pulse overlay -->
+  <g>
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4.5s" repeatCount="indefinite"/>
+    <rect x="94"  y="158" width="2" height="2" fill="#FFEE60"/>
+    <rect x="116" y="158" width="2" height="2" fill="#FFEE60"/>
+  </g>
+
+  <!-- ====================================================================
+       TEXT  (top-right area)
+       ==================================================================== -->
+  <text x="840" y="40" font-family="monospace" font-size="14" fill="#F4A050" text-anchor="middle" font-weight="bold">pcastilhodev</text>
+  <rect x="760" y="46" width="160" height="2" fill="#D06020"/>
+  <text x="840" y="62" font-family="monospace" font-size="8" fill="#A04010" text-anchor="middle">software developer</text>
 </svg>
