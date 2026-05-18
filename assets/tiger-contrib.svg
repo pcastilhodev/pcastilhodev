@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 782 168" width="782" height="168">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
       @keyframes walk {
         0%   { transform: translateX(-40px); }
         100% { transform: translateX(862px); }
@@ -381,10 +380,11 @@
   <rect x="734" y="120" width="12" height="12" rx="2" fill="#1a3a2a"/>
   <rect x="734" y="134" width="12" height="12" rx="2" fill="#1a3a2a"/>
   <rect x="748" y="50" width="12" height="12" rx="2" fill="#e9c46a"/>
+  <rect x="748" y="64" width="12" height="12" rx="2" fill="#1a3a2a"/>
 
   <!-- Label -->
   <text x="20" y="42"
-    font-family="'Press Start 2P', monospace" font-size="8" fill="#e9c46a">
+    font-family="monospace" font-size="8" fill="#e9c46a">
     contributions
   </text>
 
