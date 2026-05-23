@@ -385,6 +385,7 @@
   <rect x="748" y="92" width="12" height="12" rx="2" fill="#1a3a2a"/>
   <rect x="748" y="106" width="12" height="12" rx="2" fill="#1a3a2a"/>
   <rect x="748" y="120" width="12" height="12" rx="2" fill="#1a3a2a"/>
+  <rect x="748" y="134" width="12" height="12" rx="2" fill="#1a3a2a"/>
 
   <!-- Label -->
   <text x="20" y="42"
